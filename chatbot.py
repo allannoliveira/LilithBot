@@ -11,7 +11,7 @@ config = {
     'user': 'tester',
     'password': 'admin@123',
     'host': 'localhost',
-    'port': 3306,  # Porta padrão do MySQL
+    'port': 3306,  
     'database': 'dbmonitoramento',
     'raise_on_warnings': True
 }
@@ -40,14 +40,13 @@ try:
     def getDB():
         while True:
             cursor.execute("SELECT * FROM impressoras")
-
             results = cursor.fetchall()
 
-            for row in results:  # Alterei o nome da variável para 'row' para evitar confusão
-                # Construa a mensagem a ser enviada para o bot
-                mensagem = f"ID: {row[0]}, Nome: {row[1]}, Status: {row[2]}"  # Modifique conforme sua estrutura de dados
+            for row in results: 
+                
+                mensagem = f"ID: {row[0]}, Nome: {row[1]}, Status: {row[2]}" 
                 bot.send_message(chat_id='SEU_CHAT_ID',
-                                 text=mensagem)  # Substitua 'SEU_CHAT_ID' pelo ID do seu chat do Telegram
+                                 text=mensagem) 
 
             time.sleep(300)
 
