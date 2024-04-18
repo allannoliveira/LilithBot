@@ -11,7 +11,7 @@ API_KEY = "7191570401:AAFY0QPJq3WNoBob-CHy60SZFxYrLg6N5tM"
 bot = telebot.TeleBot(API_KEY)
 
 
-def checkstart(message):
+def checkstart():
     return True
 
 
@@ -31,7 +31,7 @@ def getDB():
 
             if result: 
                 temperature = float(result[1])
-                if temperature >= 23:
+                if temperature >= 26:
                     print(temperature)
                     chat = f"Favor verificar servidor: {temperature}°C"
                     bot.send_message(chat_id='-1002063771313', text=chat)
