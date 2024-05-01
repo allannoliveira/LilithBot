@@ -7,7 +7,7 @@ import telebot
 import time
 from dbconect import conn
 
-API_KEY = "7191570401:AAFY0QPJq3WNoBob-CHy60SZFxYrLg6N5tM"
+API_KEY = "past your ID"
 bot = telebot.TeleBot(API_KEY)
 
 
