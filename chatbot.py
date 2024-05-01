@@ -34,7 +34,7 @@ def getDB():
                 if temperature >= 26:
                     print(temperature)
                     chat = f"Favor verificar servidor: {temperature}°C"
-                    bot.send_message(chat_id='-1002063771313', text=chat)
+                    bot.send_message(chat_id='enter with your IDCHAT', text=chat)
 
             time.sleep(300)
 
