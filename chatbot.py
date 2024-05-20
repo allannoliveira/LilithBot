@@ -10,11 +10,8 @@ from dbconect import conn
 API_KEY = "past your ID"
 bot = telebot.TeleBot(API_KEY)
 
-
 def checkstart():
     return True
-
-
 
 @bot.message_handler(func=checkstart)
 def respond(message):
@@ -38,6 +35,8 @@ def getDB():
 
             time.sleep(300)
 
+# send message with starting bot
+bot.send_message(chat_id= 'enter your chat id', text="Initing monitoring server temperature")
 
 getDB()
 bot.polling()
